@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动态叙事设计师简历</title>
+    <style>
+        body { margin: 0; font-family: 'Helvetica Neue', Arial, sans-serif; background-color: #0f0f0f; color: #ffffff; overflow-x: hidden; }
+        .container { padding: 10vh 10vw; max-width: 800px; margin: 0 auto; }
+        h1 { font-size: 4rem; margin-bottom: 0.5rem; cursor: pointer; transition: color 0.3s; }
+        h1:hover { color: #00ff88; }
+        h2 { font-size: 2rem; border-bottom: 1px solid #333; padding-bottom: 10px; margin-top: 3rem; }
+        p { font-size: 1.2rem; line-height: 1.8; color: #cccccc; }
+        .project { background: #1a1a1a; padding: 20px; border-radius: 10px; margin-bottom: 20px; transform: translateY(20px); opacity: 0; animation: fadeInUp 0.8s forwards; }
+        .project:nth-child(2) { animation-delay: 0.2s; }
+        .project:nth-child(3) { animation-delay: 0.4s; }
+        @keyframes fadeInUp { to { transform: translateY(0); opacity: 1; } }
+        .interactive-btn { display: inline-block; margin-top: 20px; padding: 10px 30px; background: transparent; color: #00ff88; border: 1px solid #00ff88; border-radius: 5px; cursor: pointer; font-size: 1rem; transition: all 0.3s; }
+        .interactive-btn:hover { background: #00ff88; color: #0f0f0f; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="name-title">李裕洛</h1>
+        <p>叙事设计师 / 交互创作者</p>
+        
+        <h2>关于我</h2>
+        <p>专注于通过代码与故事构建沉浸式交互体验。擅长将抽象概念转化为模块化、可互动的数字叙事。</p>
+        
+        <h2>项目经历</h2>
+        <div class="project">
+            <h3>模块化互动叙事简历</h3>
+            <p>基于纯前端技术构建的个人叙事空间，支持动态交互与模块化内容更新。</p>
+        </div>
+        <div class="project">
+            <h3>沉浸式空间叙事设计</h3>
+            <p>结合视觉与交互逻辑，打造多维度用户体验项目。</p>
+        </div>
+        
+        <button class="interactive-btn" onclick="triggerInteraction()">点击触发交互</button>
+    </div>
+
+    <script>
+        function triggerInteraction() {
+            const title = document.getElementById('name-title');
+            title.textContent = "欢迎进入我的叙事空间 ✨";
+            title.style.color = "#00ff88";
+            setTimeout(() => {
+                title.textContent = "李裕洛";
+                title.style.color = "#ffffff";
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
