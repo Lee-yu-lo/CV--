@@ -1,38 +1,36 @@
-# CHEN DESIGN 风格动态简历
+# CHEN DESIGN · 叙事设计师网页
 
-这是一个数据驱动的叙事设计师个人简历 / 作品集静态网页。
+这是一个纯静态、数据驱动的单页简历 / 作品集页面，无需构建工具即可运行。
 
-## 文件结构
+## 访问
 
-- `index.html`：语义化页面结构，以及顶部的可编辑简历数据区
-- `styles.css`：响应式视觉样式、布局与微交互
-- `script.js`：数据渲染、滚动显现、移动端菜单与加载动画
+提交到 GitHub Pages 后访问：
 
-## 如何修改内容
+`https://lee-yu-lo.github.io/CV--/`
 
-打开 `index.html`，找到：
+## 修改内容
+
+打开 `index.html`，找到顶部的：
 
 ```html
 <script type="application/json" id="resume-data">
 ```
 
-只修改这个 JSON 对象中的内容即可更新页面：
+只修改这段 JSON 中的文字、数组和联系方式即可。不要删除 JSON 的引号、逗号或大括号。
 
-- `meta`：姓名、职位、简介、所在地和合作状态
+- `meta`：首页姓名、身份、地点、简介
+- `nav`：导航文字
 - `about`：关于我和统计信息
-- `responsibilities.items`：职责方向卡片
-- `tools.items`：工具列表，可替换为 Figma、Adobe Creative Suite、Blender、Procreate 等
-- `method.steps`：叙事设计工作流步骤
-- `contact`：邮箱、联系文案和页脚
+- `responsibilities.items`：职责卡片，可复制对象追加项目
+- `tools.items`：软件工具列表，可追加工具名称
+- `method.steps`：工作流程，可修改步骤标题和描述
+- `contact`：联系 CTA、邮箱、页脚
+- `ui`：加载文案、品牌名、菜单和底部辅助文字
 
-修改数组中的对象可以增加或减少列表项，不需要改动页面结构或 JavaScript。
+## 文件说明
 
-## 本地预览
+- `index.html`：语义化页面结构 + 顶部可编辑数据
+- `styles.css`：纸色 / 墨色视觉系统、杂志排版、响应式布局与动效
+- `script.js`：数据渲染、滚动渐显、加载动画、移动端菜单
 
-直接用浏览器打开 `index.html` 即可预览。若使用 VS Code，可通过 Live Server 启动本地服务。
-
-## 发布
-
-仓库启用 GitHub Pages 后，页面可通过以下地址访问：
-
-`https://lee-yu-lo.github.io/CV--/`
+页面使用 Google Fonts；如果访问环境无法加载字体，会自动回退到 Georgia、Arial 等系统字体。

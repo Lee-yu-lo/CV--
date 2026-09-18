@@ -1,27 +1,37 @@
 <!doctype html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#f3efe8" />
-  <meta name="description" content="李予乐的叙事设计师作品集与履历。" />
-  <title>叙事设计师 · 交互式作品集与履历</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f2eee6">
+  <meta name="description" content="叙事设计师的个人简历与作品集。">
+  <title>CHEN DESIGN · 叙事设计师</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="loader" aria-hidden="true"><span>正在展开故事</span><i></i></div>
+  <!-- ========== 加载层：结构无需修改 ========== -->
+  <div class="loader" aria-hidden="true"><span data-content="ui.loading"></span><i></i></div>
   <div class="grain" aria-hidden="true"></div>
 
-  <!-- ========== 可编辑区：只需修改此处的数据，即可更新页面文字 ========== -->
+  <!-- ========== 可编辑区：只修改此处 JSON，即可更新页面所有文案 ========== -->
   <script type="application/json" id="resume-data">
   {
+    "ui": {
+      "loading": "正在展开故事",
+      "brand": "CHEN DESIGN",
+      "brandSub": "NARRATIVE / EXPERIENCE",
+      "menuOpen": "打开菜单",
+      "menuClose": "关闭菜单",
+      "footerExplore": "SCROLL TO EXPLORE",
+      "backTop": "返回顶部"
+    },
     "meta": {
-      "pageTitle": "叙事设计师 · 交互式作品集与履历",
+      "pageTitle": "CHEN DESIGN · 叙事设计师",
       "eyebrow": "NARRATIVE DESIGNER / PORTFOLIO 2024—",
-      "name": "李予乐",
+      "name": "陈予乐",
       "role": "叙事设计师",
       "location": "中国 · 杭州 / 可远程合作",
       "availability": "开放合作中",
@@ -34,61 +44,90 @@
       "title": "把文化的回响，\n转译成当代体验。",
       "body": "我是一位叙事设计师，专注于从文化原型与企业基因中提炼叙事势能，再将它们转化为具有情感温度、清晰结构与媒介适配性的体验。",
       "note": "我的工作不止是讲述故事，更是为故事搭建发生的现场。",
-      "stats": [{"value":"02", "label":"核心叙事方向"}, {"value":"∞", "label":"可展开的媒介"}, {"value":"01", "label":"持续生长的视角"}]
+      "stats": [
+        {"value":"02", "label":"核心叙事方向"},
+        {"value":"∞", "label":"可展开的媒介"},
+        {"value":"01", "label":"持续生长的视角"}
+      ]
     },
     "responsibilities": {
       "label": "02 / RESPONSIBILITIES",
       "title": "两种路径，\n同一个内核。",
       "items": [
-        {"number":"01", "title":"旧典新声", "subtitle":"经典 IP 母题的叙事重构与再创", "body":"基于已有文化符号与故事原型，进行跨媒介的改编与再创作，赋予经典叙事当代语境下的新表达。"},
-        {"number":"02", "title":"从 0 到 1", "subtitle":"企业文化驱动的原创叙事策划", "body":"深度解构品牌基因与核心价值，从零构建原创概念体系，通过叙事设计将抽象文化转化为可感知的体验。"}
+        {"number":"01", "title":"旧典新声", "subtitle":"经典 IP 母题的叙事重构与再创", "body":"基于已有文化符号与故事原型，进行跨媒介的改编与再创作，赋予经典叙事当代语境下的新表达。", "tag":"REINTERPRETATION"},
+        {"number":"02", "title":"从 0 到 1", "subtitle":"企业文化驱动的原创叙事策划", "body":"深度解构品牌基因与核心价值，从零构建原创概念体系，通过叙事设计将抽象文化转化为可感知的体验。", "tag":"ORIGIN STORY"}
       ]
     },
     "tools": {
       "label": "03 / TOOLKIT",
       "title": "让想象拥有\n可执行的形状。",
-      "description": "常用的工具会随项目而变，但保持好奇、建立秩序与持续打磨，是始终不变的工作方式。",
+      "description": "工具会随项目而变，但保持好奇、建立秩序与持续打磨，是始终不变的工作方式。",
       "items": ["在此添加工具名称", "在此添加工具名称", "在此添加工具名称", "在此添加工具名称", "在此添加工具名称", "在此添加工具名称"]
     },
     "method": {
       "label": "04 / METHOD",
       "title": "从一个模糊的念头，\n到一次完整的相遇。",
       "description": "这是一个可被复用、也允许被打破的工作流。你可以在下方替换为自己的叙事设计方法论。",
-      "steps": [{"index":"01", "title":"需求洞察", "text":"在此添加你的方法论描述"}, {"index":"02", "title":"故事原型", "text":"在此添加你的方法论描述"}, {"index":"03", "title":"媒介适配", "text":"在此添加你的方法论描述"}, {"index":"04", "title":"体验落地", "text":"在此添加你的方法论描述"}]
+      "steps": [
+        {"index":"01", "title":"需求洞察", "text":"在此添加你的方法论描述"},
+        {"index":"02", "title":"故事原型", "text":"在此添加你的方法论描述"},
+        {"index":"03", "title":"媒介适配", "text":"在此添加你的方法论描述"},
+        {"index":"04", "title":"体验落地", "text":"在此添加你的方法论描述"}
+      ]
     },
     "contact": {
       "label": "05 / CONTACT",
       "title": "如果你也在寻找\n一个好故事的下一种可能。",
       "cta": "与我聊聊",
       "email": "hello@example.com",
-      "footer": "© 2024 李予乐 · 用故事连接人与世界"
+      "footer": "© 2024 陈予乐 · 用故事连接人与世界"
     }
   }
   </script>
   <!-- ========== 可编辑区结束 ========== -->
 
   <header class="site-header">
-    <a class="brand" href="#top" aria-label="返回首页"><span>LYL</span><small>STORY / DESIGN</small></a>
+    <a class="brand" href="#top" aria-label="返回顶部"><span data-content="ui.brand"></span><small data-content="ui.brandSub"></small></a>
     <nav class="desktop-nav" aria-label="主导航"></nav>
-    <button class="menu-toggle" type="button" aria-label="打开菜单" aria-expanded="false"><span></span><span></span></button>
+    <button class="menu-toggle" type="button" aria-expanded="false"><span></span><span></span></button>
   </header>
   <div class="mobile-nav" aria-hidden="true"></div>
 
   <main id="top">
+    <!-- ========== 模块一：Hero ========== -->
     <section class="hero section-reveal" aria-labelledby="hero-title">
       <div class="hero-orbit" aria-hidden="true"><span></span><span></span><span></span></div>
-      <div class="hero-copy"><p class="eyebrow" data-field="eyebrow"></p><h1 id="hero-title"><span data-field="name"></span><em data-field="role"></em></h1><p class="hero-intro" data-field="intro"></p></div>
+      <div class="hero-copy">
+        <p class="eyebrow" data-field="eyebrow"></p>
+        <h1 id="hero-title"><span data-field="name"></span><em data-field="role"></em></h1>
+        <p class="hero-intro" data-field="intro"></p>
+      </div>
       <div class="hero-meta"><span data-field="location"></span><span class="availability"><i></i><b data-field="availability"></b></span></div>
       <a class="scroll-hint" href="#about"><span data-field="scrollHint"></span><i>↓</i></a>
     </section>
 
-    <section class="about section-wrap section-reveal" id="about"><div class="section-label" data-content="about.label"></div><div class="about-grid"><div class="section-heading"><h2 data-content="about.title"></h2></div><div class="about-copy"><p class="lead" data-content="about.body"></p><p class="note" data-content="about.note"></p></div></div><div class="stats" data-stats></div></section>
-    <section class="responsibilities section-wrap section-reveal" id="responsibilities"><div class="section-label" data-content="responsibilities.label"></div><div class="responsibility-intro"><h2 data-content="responsibilities.title"></h2></div><div class="responsibility-list" data-responsibilities></div></section>
+    <!-- ========== 模块二：About ========== -->
+    <section class="about section-wrap section-reveal" id="about">
+      <div class="section-label" data-content="about.label"></div>
+      <div class="about-grid"><div class="section-heading"><h2 data-content="about.title"></h2></div><div class="about-copy"><p class="lead" data-content="about.body"></p><p class="note" data-content="about.note"></p></div></div>
+      <div class="stats" data-stats></div>
+    </section>
+
+    <!-- ========== 模块三：Responsibilities ========== -->
+    <section class="responsibilities section-wrap section-reveal" id="responsibilities">
+      <div class="section-label" data-content="responsibilities.label"></div><div class="responsibility-intro"><h2 data-content="responsibilities.title"></h2></div><div class="responsibility-list" data-responsibilities></div>
+    </section>
+
+    <!-- ========== 模块四：Tools ========== -->
     <section class="tools section-wrap section-reveal" id="tools"><div class="section-label" data-content="tools.label"></div><div class="two-column"><div><h2 data-content="tools.title"></h2></div><div><p class="muted" data-content="tools.description"></p><ul class="tool-list" data-tools></ul></div></div></section>
+
+    <!-- ========== 模块五：Method ========== -->
     <section class="method section-wrap section-reveal" id="method"><div class="section-label" data-content="method.label"></div><div class="method-head"><h2 data-content="method.title"></h2><p class="muted" data-content="method.description"></p></div><div class="method-grid" data-method></div></section>
-    <section class="contact section-wrap section-reveal" id="contact"><div class="contact-mark" aria-hidden="true">✳</div><div class="section-label" data-content="contact.label"></div><h2 data-content="contact.title"></h2><a class="contact-link" data-email href="mailto:hello@example.com"><span data-email-text></span><i>↗</i></a></section>
+
+    <!-- ========== 模块六：Contact ========== -->
+    <section class="contact section-wrap section-reveal" id="contact"><div class="contact-mark" aria-hidden="true">✳</div><div class="section-label" data-content="contact.label"></div><h2 data-content="contact.title"></h2><a class="contact-link" data-email><span data-content="contact.cta"></span><i>↗</i></a><p class="email" data-email-text></p></section>
   </main>
-  <footer><span data-content="contact.footer"></span><span>SCROLL TO EXPLORE · <a href="#top">↑</a></span></footer>
+  <footer><span data-content="contact.footer"></span><span><span data-content="ui.footerExplore"></span> · <a href="#top" data-content="ui.backTop"></a></span></footer>
   <script src="script.js"></script>
 </body>
 </html>
